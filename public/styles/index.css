@@ -99,6 +99,7 @@
   color: #655a7c;
   padding: 9px;
   text-align: center;
+  width: 100%;
 }
 
 #app .main_content .shortify_result div input[type='text']:focus {
