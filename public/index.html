@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shortify</title>
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <script src="https://kit.fontawesome.com/42daed104e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <a href="/"><h1>SHORTIFY</h1></a>
+                <p>A simple, but elegant URL shortener</p>
+            </header>
+            <div class="main_content">
+                <div v-if="!urlIsShortified" class="shortify_form">
+                    <p>Enter the URL that you would like to shorten</p>
+                    <input type="text" name="url" id="url" v-model="url" />
+                    <button @click="shortifyUrl" :disabled="!url">Shortify</button>
+                </div>
+                <div v-if="urlIsShortified" class="shortify_result">
+                    <p><span>Viola!</span> Your shortified url is ready!</p>
+                    <div>
+                        <button @click="copyUrlToClipboard"><i class="far fa-copy"></i></button>
+                        <input type="text" id="url_container" v-model="url" />
+                        <button @click="goToURL"><span class="go_text">GO!</span> <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <span class="message_container">{{message}}</span>
+                    <button @click="resetProcess"><i class="fas fa-redo-alt"></i> Another one!</button>
+                </div>
+            </div>
+            <footer>
+                <h2><i class="far fa-copyright"></i> Shortify - 2021</h2>
+            </footer>
+        </div>
+        <script src="./js/vue.min.js" defer></script>
+        <script src="./js/index.js" defer></script>
+    </body>
+</html>
