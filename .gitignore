@@ -1,4 +1,2 @@
 node_modules
 .env
-/public/styles/*.css
-/public/styles/*.css.map
