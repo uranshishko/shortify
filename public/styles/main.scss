@@ -96,16 +96,6 @@ button {
     }
 }
 
-@media (max-width: 600px) {
-    #app {
-        .main_content {
-            .go_text {
-                display: none;
-            }
-        }
-    }
-}
-
 @media (max-width: 400px) {
     #app {
         .main_content {

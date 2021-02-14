@@ -67,7 +67,7 @@
             div {
                 display: flex;
                 align-items: center;
-                justify-content: space-evenly;
+                justify-content: center;
 
                 input[type='text'] {
                     font-size: 24px;
@@ -76,7 +76,7 @@
                     color: $color_1;
                     padding: 9px;
                     text-align: center;
-                    width: 100%;
+                    width: 90%;
 
                     &:focus {
                         outline: none;
