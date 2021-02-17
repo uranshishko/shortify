@@ -23,7 +23,7 @@ exports.default = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             return;
         }
         const url = new url_1.default(req.body);
-        url.path = url._id.toString().slice(23 - 6, 23);
+        url.path = url._id.toString().slice(23 - 6, 24);
         yield url.save();
         res.json({
             url: req.get('host') + '/' + url.path,

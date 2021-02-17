@@ -13,7 +13,7 @@ export default async (req: Request, res: Response) => {
         }
 
         const url = new Url(req.body);
-        url.path = url._id.toString().slice(23 - 6, 23);
+        url.path = url._id.toString().slice(23 - 6, 24);
         await url.save();
         res.json({
             url: req.get('host') + '/' + url.path,

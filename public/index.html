@@ -22,7 +22,7 @@
                     <button @click="shortifyUrl" :disabled="!url">Shortify</button>
                 </div>
                 <div v-if="urlIsShortified" class="shortify_result">
-                    <p><span>Viola!</span> Your shortified url is ready!</p>
+                    <p><span>Voilá!</span> Your shortified url is ready!</p>
                     <div>
                         <button @click="copyUrlToClipboard"><i class="far fa-copy"></i></button>
                         <input type="text" id="url_container" v-model="url" />
